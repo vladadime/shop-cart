@@ -1,6 +1,12 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes,
+    Navigate,
+} from 'react-router-dom'
 import { Cart, Login, Products } from './pages'
 import { Layout } from './components'
+import PrivateRoute from './components/PrivateRoute/PrivateRoute'
 
 function App() {
     return (
@@ -8,9 +14,24 @@ function App() {
             <Layout>
                 <Router>
                     <Routes>
-                        <Route path='/' element={<Products />} />
-                        <Route path='/cart' element={<Cart />} />
                         <Route path='/login' element={<Login />} />
+                        <Route
+                            path='/products'
+                            element={
+                                <PrivateRoute>
+                                    <Products />
+                                </PrivateRoute>
+                            }
+                        />
+                        <Route
+                            path='/cart'
+                            element={
+                                <PrivateRoute>
+                                    <Cart />
+                                </PrivateRoute>
+                            }
+                        />
+                        <Route path='/' element={<Navigate to='/products' />} />
                     </Routes>
                 </Router>
             </Layout>
