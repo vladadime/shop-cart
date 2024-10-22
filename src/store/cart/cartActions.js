@@ -1,13 +1,13 @@
-import { addToCart, removeFromCart, updateQuantity } from './cartSlice';
+import { addToCart, removeFromCart, updateQuantity } from './cartSlice'
 
-export const addProductToCart = (product, quantity) => (dispatch) => {
-    dispatch(addToCart({ product, quantity }));
+export const addProductToCart = (product) => (dispatch) => {
+    dispatch(addToCart(product))
 }
 
 export const removeProductFromCart = (productId) => (dispatch) => {
-    dispatch(removeFromCart(productId));
+    dispatch(removeFromCart(productId))
 }
 
 export const updateProductQuantity = (productID, quantity) => (dispatch) => {
-    dispatch(updateQuantity({ productID, quantity }));
+    dispatch(updateQuantity({ productID, quantity }))
 }
