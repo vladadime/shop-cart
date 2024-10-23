@@ -7,6 +7,7 @@ import {
 import { Cart, Login, Products } from './pages'
 import { Layout } from './components'
 import PrivateRoute from './components/PrivateRoute/PrivateRoute'
+import PublicRoute from './components/PublicRoute/PublicRoute'
 
 function App() {
     return (
@@ -14,7 +15,14 @@ function App() {
             <Layout>
                 <Router>
                     <Routes>
-                        <Route path='/login' element={<Login />} />
+                        <Route
+                            path='/login'
+                            element={
+                                <PublicRoute>
+                                    <Login />
+                                </PublicRoute>
+                            }
+                        />
                         <Route
                             path='/products'
                             element={
