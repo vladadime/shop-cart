@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addProductToCart } from '../../store/cart/cartActions.js'
+import { BsBasket3 } from 'react-icons/bs'
+import { TfiPlus, TfiMinus } from 'react-icons/tfi'
 const Product = ({ product }) => {
     const [isHovered, setIsHovered] = useState(false)
     const [productCounter, setProductCounter] = useState(1)
@@ -44,30 +46,30 @@ const Product = ({ product }) => {
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     >
-                        <div className='rounded-full bg-white me-2 px-4'>
+                        <div className='rounded-full bg-white me-2 px-4 py-1'>
                             <div className='flex justify-around'>
                                 <button
-                                    className='text-gray-600 p-1 rounded-full hover:bg-gray-200 text-2xl'
+                                    className='text-gray-600 p-1 rounded-full hover:bg-gray-200 text-xl'
                                     onClick={decreaseProductCounter}
                                 >
-                                    -
+                                    <TfiMinus />
                                 </button>
                                 <span className='mx-2 text-base my-auto'>
                                     {productCounter}
                                 </span>
                                 <button
-                                    className='text-gray-600 p-1 rounded-full hover:bg-gray-200 text-2xl'
+                                    className='text-gray-600 p-1 rounded-full hover:bg-gray-200 text-xl'
                                     onClick={increaseProductCounter}
                                 >
-                                    +
+                                    <TfiPlus />
                                 </button>
                             </div>
                         </div>
                         <button
-                            className=' bg-black text-white rounded-full p-2'
+                            className='bg-black text-white rounded-full p-2 text-2xl'
                             onClick={handleAddToCart}
                         >
-                            Cart
+                            <BsBasket3 />
                         </button>
                     </div>
                 )}
@@ -75,7 +77,7 @@ const Product = ({ product }) => {
                 <h3 className='mt-2 text-lg font-semibold'>{product.name}</h3>
             </div>
             <span className='text-sm font-bold'>{product.productLabel}</span>
-            <div className='flex flex-column'>
+            <div className='flex'>
                 <span className='me-1 font-medium'>{product.productPrice}</span>
                 <span className='text-xs mb-auto'>RSD</span>
             </div>
