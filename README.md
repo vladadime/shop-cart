@@ -2,10 +2,6 @@
 
 A simple and intuitive React-based e-commerce application where users can browse products, add items to a cart, and complete purchases. Key features include product listing, cart management (add/remove products, adjust quantities), and a smooth checkout process.
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
 ## Features
 
 - **User Login:** Users can log in using predefined credentials.
@@ -14,10 +10,9 @@ These instructions will get you a copy of the project up and running on your loc
 - **Responsive Design:** The application is responsive and works well on various screen sizes.
 - **Static Payment Button:** A hardcoded button to simulate payment.
 
-## User Credentials
+## Getting Started
 
-- **Username:** `testUser@example.com`
-- **Password:** `testUser123`
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -47,6 +42,11 @@ To start the development server, run the following command:
 This will start the development server and you can view the project in your browser at 
 
   `http://localhost:3000`
+
+## User Credentials
+
+- **Username:** `testUser@example.com`
+- **Password:** `testUser123`
 
 ## Built With
 
