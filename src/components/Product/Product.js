@@ -1,6 +1,10 @@
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addProductToCart } from '../../store/cart/cartActions.js'
 const Product = ({ product }) => {
     const [isHovered, setIsHovered] = useState(false)
+    const [productCounter, setProductCounter] = useState(1)
+    const dispatch = useDispatch()
 
     const handleMouseEnter = () => {
         setIsHovered(true)
@@ -8,6 +12,19 @@ const Product = ({ product }) => {
 
     const handleMouseLeave = () => {
         setIsHovered(false)
+    }
+
+    const increaseProductCounter = () => {
+        setProductCounter((prevCounter) => prevCounter + 1)
+    }
+
+    const decreaseProductCounter = () => {
+        setProductCounter((prevCounter) => Math.max(prevCounter - 1, 1))
+    }
+
+    const handleAddToCart = () => {
+        product.quantity = productCounter
+        dispatch(addProductToCart(product))
     }
     return (
         <div>
@@ -29,18 +46,27 @@ const Product = ({ product }) => {
                     >
                         <div className='rounded-full bg-white me-2 px-4'>
                             <div className='flex justify-around'>
-                                <button className='text-gray-600 p-1 rounded-full hover:bg-gray-200 text-2xl'>
+                                <button
+                                    className='text-gray-600 p-1 rounded-full hover:bg-gray-200 text-2xl'
+                                    onClick={decreaseProductCounter}
+                                >
                                     -
                                 </button>
                                 <span className='mx-2 text-base my-auto'>
-                                    1
+                                    {productCounter}
                                 </span>
-                                <button className='text-gray-600 p-1 rounded-full hover:bg-gray-200 text-2xl'>
+                                <button
+                                    className='text-gray-600 p-1 rounded-full hover:bg-gray-200 text-2xl'
+                                    onClick={increaseProductCounter}
+                                >
                                     +
                                 </button>
                             </div>
                         </div>
-                        <button className=' bg-black text-white rounded-full p-2'>
+                        <button
+                            className=' bg-black text-white rounded-full p-2'
+                            onClick={handleAddToCart}
+                        >
                             Cart
                         </button>
                     </div>

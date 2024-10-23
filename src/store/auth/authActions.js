@@ -3,7 +3,7 @@ import { credentials } from '../../data/data.js'
 
 export const login = (email, password) => {
     return (dispatch) => {
-        if(
+        if (
             credentials &&
             credentials.email === email &&
             credentials.password === password
