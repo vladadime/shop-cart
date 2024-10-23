@@ -1,5 +1,6 @@
 export { default as Button } from './Button/Button'
 export { default as CartProduct } from './CartProduct/CartProduct'
+export { default as Header } from './Header/Header'
 export { default as Layout } from './Layout/Layout'
 export { default as PrivateRoute } from './PrivateRoute/PrivateRoute'
 export { default as Product } from './Product/Product'
