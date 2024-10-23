@@ -13,35 +13,33 @@ function App() {
     return (
         <div className='App'>
             <Layout>
-                <Router>
-                    <Routes>
-                        <Route
-                            path='/login'
-                            element={
-                                <PublicRoute>
-                                    <Login />
-                                </PublicRoute>
-                            }
-                        />
-                        <Route
-                            path='/products'
-                            element={
-                                <PrivateRoute>
-                                    <Products />
-                                </PrivateRoute>
-                            }
-                        />
-                        <Route
-                            path='/cart'
-                            element={
-                                <PrivateRoute>
-                                    <Cart />
-                                </PrivateRoute>
-                            }
-                        />
-                        <Route path='/' element={<Navigate to='/products' />} />
-                    </Routes>
-                </Router>
+                <Routes>
+                    <Route
+                        path='/login'
+                        element={
+                            <PublicRoute>
+                                <Login />
+                            </PublicRoute>
+                        }
+                    />
+                    <Route
+                        path='/products'
+                        element={
+                            <PrivateRoute>
+                                <Products />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path='/cart'
+                        element={
+                            <PrivateRoute>
+                                <Cart />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route path='/' element={<Navigate to='/products' />} />
+                </Routes>
             </Layout>
         </div>
     )
