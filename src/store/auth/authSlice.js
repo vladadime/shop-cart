@@ -9,9 +9,9 @@ const authSlice = createSlice({
     },
     reducers: {
         loginSuccess: (state) => {
-            state.isLoggedIn = true;
-            state.error = null;
-            Cookies.set('isLoggedIn', 'true', { expires: 0.08 });
+            state.isLoggedIn = true
+            state.error = null
+            Cookies.set('isLoggedIn', 'true', { expires: 0.08 })
         },
         loginFailure: (state) => {
             state.isLoggedIn = false
@@ -20,7 +20,7 @@ const authSlice = createSlice({
         logout: (state) => {
             state.isLoggedIn = false
             state.error = null
-            Cookies.remove('isLoggedIn');
+            Cookies.remove('isLoggedIn')
         },
     },
 })

@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addProductToCart } from '../../store/cart/cartActions.js';
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { addProductToCart } from '../../store/cart/cartActions.js'
 const Product = ({ product }) => {
-    const [isHovered, setIsHovered] = useState(false);
-    const [productCounter, setProductCounter] = useState(1);
-    const dispatch = useDispatch();
+    const [isHovered, setIsHovered] = useState(false)
+    const [productCounter, setProductCounter] = useState(1)
+    const dispatch = useDispatch()
 
     const handleMouseEnter = () => {
         setIsHovered(true)
@@ -23,8 +23,8 @@ const Product = ({ product }) => {
     }
 
     const handleAddToCart = () => {
-        product.quantity = productCounter;
-        dispatch(addProductToCart(product));
+        product.quantity = productCounter
+        dispatch(addProductToCart(product))
     }
     return (
         <div>
