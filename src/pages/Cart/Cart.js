@@ -17,21 +17,15 @@ const Cart = () => {
     }
 
     return (
-        <div className='container mx-auto p-4 h-screen'>
+        <div className='h-full'>
             <div className='flex justify-between mb-6'>
                 <div className='text-left'>
                     <span className='text-base font-bold'>Tvoja korpa</span>
                 </div>
-
-                <div className='absolute top-5 right-5'>
-                    <Link to='/products'>
-                        <button>Products</button>
-                    </Link>
-                </div>
             </div>
 
-            <div className='md:flex'>
-                <div className='flex flex-col w-3/5'>
+            <div className='lg:flex'>
+                <div className='flex flex-col w-full lg:w-3/5'>
                     {cartItems && cartItems.length
                         ? cartItems.map((product) => (
                               <CartProduct
@@ -42,7 +36,9 @@ const Cart = () => {
                           ))
                         : null}
                 </div>
-                <Receipt countPrice={countPrice} />
+                <div className='w-full lg:w-1/3 lg:ms-16 '>
+                    <Receipt countPrice={countPrice} />
+                </div>
             </div>
         </div>
     )
