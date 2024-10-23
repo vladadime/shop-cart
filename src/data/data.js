@@ -12,115 +12,131 @@ import product10 from './product10.png'
 export const products = [
     {
         productID: 1,
-        productLabel: 'Naturela sa Rogačem i Agava Šećerom',
+        productLabel: 'Svinjska mast',
         productPrice: 546,
         productImage: product1,
-        productQuantity: "750g"
+        productQuantity: "750g",
+        discount: 0
     },
     {
         productID: 2,
         productLabel: 'Naturela sa Rogačem i Agava Šećerom',
         productPrice: 546,
         productImage: product2,
-        productQuantity: "750g"
+        productQuantity: "750g",
+        discount: 0.85
     },
     {
         productID: 3,
-        productLabel: 'Naturela sa Rogačem i Agava Šećerom',
+        productLabel: 'Kokosovo ulje',
         productPrice: 546,
         productImage: product3,
-        productQuantity: "750g"
+        productQuantity: "750g",
+        discount: 0
     },
     {
         productID: 4,
-        productLabel: 'Naturela sa Rogačem i Agava Šećerom',
+        productLabel: 'Kikiriki puter',
         productPrice: 546,
         productImage: product4,
-        productQuantity: "750g"
+        productQuantity: "750g",
+        discount: 0.9
     },
     {
         productID: 5,
-        productLabel: 'Naturela sa Rogačem i Agava Šećerom',
+        productLabel: 'Suncokretov puter',
         productPrice: 546,
         productImage: product5,
-        productQuantity: "750g"
+        productQuantity: "750g",
+        discount: 0.92
     },
     {
         productID: 6,
         productLabel: 'Kikiriki puter',
         productPrice: 546,
         productImage: product4,
-        productQuantity: "750g"
+        productQuantity: "750g",
+        discount: 0
     },
     {
         productID: 7,
-        productLabel: 'Naturela sa Rogačem i Agava Šećerom',
+        productLabel: 'Kokosov protein',
         productPrice: 546,
         productImage: product6,
-        productQuantity: "750g"
+        productQuantity: "750g",
+        discount: 0.83
     },
     {
         productID: 8,
-        productLabel: 'Naturela sa Rogačem i Agava Šećerom',
+        productLabel: 'Suncokretov puter',
         productPrice: 546,
         productImage: product5,
-        productQuantity: "750g"
+        productQuantity: "750g",
+        discount: 0.8
     },
     {
         productID: 9,
-        productLabel: 'Kikiriki puter',
+        productLabel: 'Zejtin suncokretovo ulje',
         productPrice: 546,
         productImage: product7,
-        productQuantity: "750g"
+        productQuantity: "1l",
+        discount: 0.78
     },
     {
         productID: 10,
-        productLabel: 'Kikiriki puter',
-        productPrice: 546,
+        productLabel: 'Devičansko susamovo tamno ulje',
+        productPrice: 739,
         productImage: product8,
-        productQuantity: "750g"
+        productQuantity: "250ml",
+        discount: 0
     },
     {
         productID: 11,
-        productLabel: 'Kikiriki puter',
+        productLabel: 'Bar sa lešnikovim puterom',
         productPrice: 546,
         productImage: product9,
-        productQuantity: "750g"
+        productQuantity: "30g",
+        discount: 0.7
     },
     {
         productID: 12,
-        productLabel: 'Naturela sa Rogačem i Agava Šećerom',
+        productLabel: 'Zejtin suncokretovo ulje',
         productPrice: 546,
         productImage: product7,
-        productQuantity: "750g"
+        productQuantity: "1l",
+        discount: 0
     },
     {
         productID: 13,
-        productLabel: 'Naturela sa Rogačem i Agava Šećerom',
+        productLabel: 'Suncokretov puter',
         productPrice: 546,
         productImage: product5,
-        productQuantity: "750g"
+        productQuantity: "750g",
+        discount: 0.8
     },
     {
         productID: 14,
-        productLabel: 'Naturela sa Rogačem i Agava Šećerom',
+        productLabel: 'Bar sa šumskim voćem',
         productPrice: 546,
         productImage: product10,
-        productQuantity: "750g"
+        productQuantity: "30g",
+        discount: 0
     },
     {
         productID: 15,
-        productLabel: 'Naturela sa Rogačem i Agava Šećerom',
+        productLabel: 'Kokosov protein',
         productPrice: 546,
         productImage: product6,
-        productQuantity: "750g"
+        productQuantity: "750g",
+        discount: 0.95
     },
     {
         productID: 16,
-        productLabel: 'Naturela sa Rogačem i Agava Šećerom',
+        productLabel: 'Suncokretov puter',
         productPrice: 546,
         productImage: product5,
-        productQuantity: "750g"
+        productQuantity: "750g",
+        discount: 0.9
     },
 ]
 
