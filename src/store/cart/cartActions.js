@@ -1,4 +1,9 @@
-import { addToCart, removeFromCart, updateQuantity } from './cartSlice'
+import {
+    addToCart,
+    removeAllFromCart,
+    removeFromCart,
+    updateQuantity,
+} from './cartSlice'
 
 export const addProductToCart = (product) => (dispatch) => {
     dispatch(addToCart(product))
@@ -6,6 +11,10 @@ export const addProductToCart = (product) => (dispatch) => {
 
 export const removeProductFromCart = (productId) => (dispatch) => {
     dispatch(removeFromCart(productId))
+}
+
+export const clearCart = () => (dispatch) => {
+    dispatch(removeAllFromCart())
 }
 
 export const updateProductQuantity = (productID, quantity) => (dispatch) => {
