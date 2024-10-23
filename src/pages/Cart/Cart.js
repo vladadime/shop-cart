@@ -1,11 +1,21 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { CartProduct, Receipt } from '../../components'
 import { Link } from 'react-router-dom'
 const Cart = () => {
-    const dispatch = useDispatch()
     const cartItems = useSelector((state) => state.cart.items)
 
-    console.log(cartItems)
+    const countPrice = (product) => {
+        if (product.discount) {
+            return Number(
+                parseFloat(
+                    product.productPrice * product.quantity * product.discount,
+                ).toFixed(2),
+            )
+        }
+
+        return product.productPrice * product.quantity
+    }
+
     return (
         <div className='container mx-auto p-4 h-screen'>
             <div className='flex justify-between mb-6'>
@@ -27,11 +37,12 @@ const Cart = () => {
                               <CartProduct
                                   key={product.productID}
                                   product={product}
+                                  countPrice={countPrice}
                               />
                           ))
                         : null}
                 </div>
-                <Receipt />
+                <Receipt countPrice={countPrice} />
             </div>
         </div>
     )
