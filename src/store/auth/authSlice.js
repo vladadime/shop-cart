@@ -11,7 +11,7 @@ const authSlice = createSlice({
         loginSuccess: (state) => {
             state.isLoggedIn = true;
             state.error = null;
-            Cookies.set('isLoggedIn', 'true', { expires: 0.04 });
+            Cookies.set('isLoggedIn', 'true', { expires: 0.08 });
         },
         loginFailure: (state) => {
             state.isLoggedIn = false
