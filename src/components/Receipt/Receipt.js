@@ -27,7 +27,7 @@ const Receipt = ({ countPrice }) => {
             return acc + countPrice(item)
         }, 0)
 
-        return sum
+        return Number(parseFloat(sum).toFixed(2))
     }
 
     const totalSaving = () => {

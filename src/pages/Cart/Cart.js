@@ -6,14 +6,10 @@ const Cart = () => {
 
     const countPrice = (product) => {
         if (product.discount) {
-            return Number(
-                parseFloat(
-                    product.productPrice * product.quantity * product.discount,
-                ).toFixed(2),
-            )
+            return Number(parseFloat(product.productPrice * product.quantity * product.discount).toFixed(2))
         }
 
-        return product.productPrice * product.quantity
+        return Number(parseFloat(product.productPrice * product.quantity).toFixed(2))
     }
 
     return (
