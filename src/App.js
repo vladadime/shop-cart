@@ -1,12 +1,9 @@
-import {
-    Route,
-    Routes,
-    Navigate,
-} from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
 import { Cart, Login, Products } from './pages'
 import { Layout } from './components'
 import PrivateRoute from './components/PrivateRoute/PrivateRoute'
 import PublicRoute from './components/PublicRoute/PublicRoute'
+import Logout from './components/Logout/Logout'
 
 function App() {
     return (
@@ -38,6 +35,7 @@ function App() {
                         }
                     />
                     <Route path='/' element={<Navigate to='/products' />} />
+                    <Route path='/logout' element={<Logout />} />
                 </Routes>
             </Layout>
         </div>

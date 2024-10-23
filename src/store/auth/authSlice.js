@@ -17,7 +17,7 @@ const authSlice = createSlice({
             state.isLoggedIn = false
             state.error = 'Invalid credentials'
         },
-        logout: (state) => {
+        signOff: (state) => {
             state.isLoggedIn = false
             state.error = null
             Cookies.remove('isLoggedIn')
@@ -25,6 +25,6 @@ const authSlice = createSlice({
     },
 })
 
-export const { loginSuccess, loginFailure, logout } = authSlice.actions
+export const { loginSuccess, loginFailure, signOff } = authSlice.actions
 
 export default authSlice.reducer
