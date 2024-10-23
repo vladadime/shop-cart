@@ -11,9 +11,9 @@ const Login = () => {
     const navigate = useNavigate()
 
     const isLoggedIn = useSelector((state) => state.auth.isLoggedIn)
-    // const error = useSelector((state) => state.auth.error)
+    const error = useSelector((state) => state.auth.error)
 
-    const handleFormSubmit = (event) => {
+    const handleLogin = (event) => {
         event.preventDefault()
         dispatch(login(email, password))
 
@@ -28,7 +28,7 @@ const Login = () => {
                 <h2 className='text-lg font-bold mb-8 text-left'>
                     Prijavi se na svoj nalog
                 </h2>
-                <form onSubmit={(event) => handleFormSubmit(event)}>
+                <form>
                     <div className='mb-8'>
                         <label
                             className='block text-black text-sm mb-4'
@@ -62,8 +62,12 @@ const Login = () => {
                             className='w-full bg-transparent text-base border-b border-black focus:outline-none'
                             onChange={(e) => setPassword(e.target.value)}
                         />
+                        <p className='text-red-600 mt-4'>{error}</p>
                     </div>
-                    <Button content='Prijavi se na nalog' />
+                    <Button
+                        content='Prijavi se na nalog'
+                        onClick={(event) => handleLogin(event)}
+                    />
                 </form>
             </div>
         </div>
